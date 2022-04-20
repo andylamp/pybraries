@@ -1,4 +1,4 @@
-# pagination.py
+"""Module that implements pagination for results provided by libraries.io"""
 from pybraries.helpers import sess
 
 DEFAULT_PAGE = 1

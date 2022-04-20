@@ -2,7 +2,7 @@
 import pytest
 
 from pybraries import fix_pages
-from pybraries.helpers import sess, clear_params
+from pybraries.helpers import clear_params, sess
 
 
 @pytest.fixture

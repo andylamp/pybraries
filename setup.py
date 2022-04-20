@@ -1,27 +1,27 @@
-from setuptools import setup, find_packages
+"""The setup module."""
+import os
 
+from setuptools import find_packages, setup
 
-def readme():
-    try:
-        with open("docs/README.rst") as f:
-            return f.read()
-    except Exception:
-        return ""
+# get the current path
+CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
 
+# parse the readme into a variable
+with open("docs/README.rst", "r", encoding="utf8") as rmd:
+    long_desc = rmd.read()
 
-setup_requirements = ["pytest-runner"]
+# fetch the requirements required
+with open(os.path.join(CURRENT_PATH, "requirements_prod.txt"), "r", encoding="utf8") as req_file:
+    requirements = req_file.read().split("\n")
 
-test_requirements = ["pytest"]
-
-requirements = ["requests>=2", "fire>0.1.1", "urllib3"]
-
+# this, should be changed in due course as fork matures
 setup(
     name="pybraries",
     version="0.4.0",
-    author="Jeff Hale",
-    author_email="jeffmshale@gmail.com",
+    author="Andreas A. Grammenos",
+    author_email="axorl@quine.sh",
     description="A Python wrapper for the libraries.io API",
-    long_description=readme(),
+    long_description=long_desc,
     url="https://github.com/pybraries/pybraries/",
     packages=find_packages(),
     install_requires=requirements,
@@ -30,11 +30,10 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "License :: OSI Approved :: BSD License",
     ],
+    python_requires=">=3.7",
     include_package_data=True,
-    setup_requires=setup_requirements,
-    test_suite="tests",
-    tests_require=test_requirements,
     zip_safe=False,
 )

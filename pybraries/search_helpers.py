@@ -1,7 +1,7 @@
 # search_helpers.py
 from typing import List
 
-from pybraries.helpers import sess, extract
+from pybraries.helpers import extract, sess
 from pybraries.make_request import make_request
 
 
@@ -33,8 +33,8 @@ def handle_query_params(action, **kwargs):
     if action == "special_project_search":
         try:
             sess.params["q"] = kwargs["keywords"]
-        except:
-            print("A string of keywords must be passed as a keyword argument")
+        except Exception as exc:
+            print(f"A string of keywords must be passed as a keyword argument, details: {exc}")
 
         if "platforms" in kwargs:
             sess.params["platforms"] = kwargs["platforms"]
@@ -47,9 +47,7 @@ def handle_query_params(action, **kwargs):
         sess.params["q"] = kwargs["project"]
 
     if "filters" in kwargs:
-        extract(*list(kwargs["filters"].keys())).of(kwargs["filters"]).then(
-            sess.params.__setitem__
-        )
+        extract(*list(kwargs["filters"].keys())).of(kwargs["filters"]).then(sess.params.__setitem__)
 
     if "sort" in kwargs:
         sess.params["sort"] = kwargs["sort"]

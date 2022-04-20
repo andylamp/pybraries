@@ -1,4 +1,4 @@
-.. Pybraries documentation master file, 
+.. Pybraries documentation master file,
 
 Welcome to Pybraries's documentation!
 =====================================
@@ -11,7 +11,7 @@ Welcome to Pybraries's documentation!
     CONTRIBUTING
     CODE_OF_CONDUCT
     HISTORY
-    
+
 
 .. autosummary::
     :toctree: stubs

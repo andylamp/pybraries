@@ -4,13 +4,11 @@ from typing import Any
 from pybraries.subscription_helpers import sub_api
 
 
-class Subscribe(object):
+class Subscribe:
     """Class for libraries.io API for changing user's libraries.io subscriptions"""
 
-    def __init__(self):
-        pass
-
-    def list_subscribed(self) -> Any:
+    @staticmethod
+    def list_subscribed() -> Any:
         """
         Return a list of packages a user is subscribed to for release notifications.
 
@@ -19,7 +17,8 @@ class Subscribe(object):
         """
         return sub_api("list_subscribed")
 
-    def subscribe(self, manager: str, package: str) -> str:
+    @staticmethod
+    def subscribe(manager: str, package: str) -> str:
         """
         Subscribe to receive notifications about new releases of a project.
 
@@ -34,7 +33,8 @@ class Subscribe(object):
         """
         return str(sub_api("subscribe", manager, package))
 
-    def check_subscribed(self, manager: str, package: str) -> bool:
+    @staticmethod
+    def check_subscribed(manager: str, package: str) -> bool:
         """
         Check if a user is subscribed to notifications for new project releases.
 
@@ -46,9 +46,8 @@ class Subscribe(object):
         """
         return bool(sub_api("check_subscribed", manager, package))
 
-    def update_subscribe(
-        self, manager: str, package: str, include_prerelease: bool = True
-    ) -> str:
+    @staticmethod
+    def update_subscribe(manager: str, package: str, include_prerelease: bool = True) -> str:
         """
         NOT IMPLEMENTED due to possible bug in libraries.io
         Update the options for a subscription.
@@ -63,7 +62,8 @@ class Subscribe(object):
         """
         return str(sub_api("update_subscribe", manager, package, include_prerelease))
 
-    def unsubscribe(self, manager: str, package: str) -> str:
+    @staticmethod
+    def unsubscribe(manager: str, package: str) -> str:
         """
         Stop receiving release notifications from a project.
 

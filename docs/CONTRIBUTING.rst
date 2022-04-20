@@ -6,8 +6,8 @@ Contributions are welcome and greatly appreciated!
 
 You can contribute in many ways:
 
-We're a welcoming project! 
-Please ensure you follow our 
+We're a welcoming project!
+Please ensure you follow our
 `Code of Conduct <https://github.com/pybraries/pybraries/blob/master/code_of_conduct.md>`_.
 
 Types of Contributions
@@ -24,7 +24,7 @@ Please don't report it in an GitHub issue or in any other public forum.
 Thank you!
 
 
-Report Bugs and Make Feature Requests 
+Report Bugs and Make Feature Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open an issue in our `GitHub Repo <https://github.com/pybraries/pybraries/issues>`_.
@@ -34,7 +34,7 @@ Write Code
 ~~~~~~~~~~
 
 Feel free to look through the GitHub issues for open issues.
-Anything tagged with "help wanted" is available to fix. 
+Anything tagged with "help wanted" is available to fix.
 
 Please ensure new and altered features have tests and are
 documented with DocStrings.
@@ -44,13 +44,13 @@ Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
 We want pybraries users to have a great experience.
-Documentation is a huge part of Developer Experience. 
+Documentation is a huge part of Developer Experience.
 
-Feel free to add to and improve the documentation. 
-You can contribute to official pybraries docs, 
+Feel free to add to and improve the documentation.
+You can contribute to official pybraries docs,
 in docstrings, or by writing blog posts.
 
-Small changes to the docs can be made by editing the code on GitHub 
+Small changes to the docs can be made by editing the code on GitHub
 in the browser and opening a PR.
 
 If making more substantial changes or additions:
@@ -89,7 +89,7 @@ Ready to contribute? Here's how to set up `pybraries` for local development.
     pip install -r requirements_dev.txt
 
 5. We use `black <https://black.readthedocs.io/en/stable/the_black_code_style.html>`_
-and `Flake8 <http://flake8.pycqa.org/en/latest/>`_ for style guide sanity. 
+and `Flake8 <http://flake8.pycqa.org/en/latest/>`_ for style guide sanity.
 
 Max line length is set to 100 characters and the following errors are ignored:
 
@@ -97,7 +97,7 @@ Max line length is set to 100 characters and the following errors are ignored:
 * F841 - local variable name is assigned to but never used
 * W291 - trailing whitespace
 
-6. When you're done making changes, 
+6. When you're done making changes,
 check that your changes pass the test suite and Flake8::
 
     pytest flake8
@@ -122,7 +122,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The code should work for Python 3.8 and higher. 
+3. The code should work for Python 3.8 and higher.
 
 Deploying
 ---------

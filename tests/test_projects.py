@@ -49,9 +49,10 @@ def test_project_search(search, monkeypatch):
 
     monkeypatch.setattr(sess, "get", new_sess_get)
 
-    projects = search.project_search(
-        keywords="visualization", platforms="Pypi", sort="stars"
-    )
+    projects = search.project_search(keywords="visualization", platforms="Pypi", sort="stars")
+
+    if projects:
+        print("All OK")
 
     monkeypatch.undo()
 
@@ -63,9 +64,7 @@ def dictfilt(x, y):
 
 
 def test_projects(search):
-    projects = search.project_search(
-        sort="stars", platforms="Pypi", keywords="visualization"
-    )
+    projects = search.project_search(sort="stars", platforms="Pypi", keywords="visualization")
 
     # resorted_projects = sorted(
     #     projects, key=lambda project: project["dependents_count"], reverse=True

@@ -35,7 +35,7 @@ History
 ------------------
 
 * Refactored code - (thanks victorgveloso!)
-* Fixed naming divergences between libraries.io API and pybraries (manager->platform and package->project) 
+* Fixed naming divergences between libraries.io API and pybraries (manager->platform and package->project)
 
 0.3.0 (2020-09-19)
 ------------------
@@ -45,7 +45,7 @@ History
 0.3.1 (2020-09-20)
 ------------------
 
-* project_search. Other project_search functionality with platforms regression fixed. 
+* project_search. Other project_search functionality with platforms regression fixed.
 
 0.3.2 (2020-09-26)
 ------------------

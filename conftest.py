@@ -21,9 +21,7 @@ def has_substring(self, substring, *other_substrings):
     )
 
 
-expect.has_substring = (
-    expect.to_have_substring
-) = expect.to_have_any_of_substrings = has_substring
+expect.has_substring = expect.to_have_substring = expect.to_have_any_of_substrings = has_substring
 
 
 def of_size(self, size):

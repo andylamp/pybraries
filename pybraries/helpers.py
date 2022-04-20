@@ -1,5 +1,6 @@
+"""Module that includes helpers that for querying."""
 import os
-from typing import Union, List, Dict, Tuple
+from typing import Dict, List, Tuple, Union
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -8,8 +9,6 @@ from urllib3.util.retry import Retry
 
 class APIKeyMissingError(Exception):
     """Custom error for API Key missing"""
-
-    pass
 
 
 LIBRARIES_API_KEY = os.environ.get("LIBRARIES_API_KEY", None)
@@ -41,7 +40,8 @@ def extract(*keys):
     class From:
         def of(self, container: Union[Dict, List, Tuple]):
             class Promise(list):  # workaround to allow monkeypatch to builtin list type
-                def then(self, f) -> List: pass
+                def then(self, f) -> List:
+                    pass
 
             def then(f):
                 try:

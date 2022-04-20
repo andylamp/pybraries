@@ -5,9 +5,7 @@ from pybraries.make_request import make_request
 
 
 def sub_api(action, manager="", package="", *args, **kwargs) -> Union[bool, str]:
-    url_end_list = [
-        "https://libraries.io/api/subscriptions"
-    ]  # start of list to build url
+    url_end_list = ["https://libraries.io/api/subscriptions"]  # start of list to build url
     more_args = []  # for unpacking args
     url_combined = ""  # final string url
     kind = "get"  # get, post, put or delete
@@ -42,9 +40,7 @@ def sub_api(action, manager="", package="", *args, **kwargs) -> Union[bool, str]
         kind = "delete"
 
         # first check if subscribed. Must be done before build url.
-        is_subscribed = sub_api(
-            "check_subscribed", manager=manager, package=package
-        )
+        is_subscribed = sub_api("check_subscribed", manager=manager, package=package)
 
         if is_subscribed:
             make_request(url_combined, kind)

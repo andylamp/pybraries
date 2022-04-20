@@ -5,14 +5,14 @@ pybraries.search.Search
 
 .. autoclass:: Search
 
-   
+
    .. automethod:: __init__
 
-   
+
    .. rubric:: Methods
 
    .. autosummary::
-   
+
       ~Search.__init__
       ~Search.platforms
       ~Search.project
@@ -32,9 +32,3 @@ pybraries.search.Search
       ~Search.user_packages_contributions
       ~Search.user_repositories
       ~Search.user_repository_contributions
-   
-   
-
-   
-   
-   
