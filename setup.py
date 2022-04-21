@@ -17,12 +17,12 @@ with open(os.path.join(CURRENT_PATH, "requirements_prod.txt"), "r", encoding="ut
 # this, should be changed in due course as fork matures
 setup(
     name="pybraries",
-    version="0.4.0",
+    version="0.4.1",
     author="Andreas A. Grammenos",
     author_email="axorl@quine.sh",
     description="A Python wrapper for the libraries.io API",
     long_description=long_desc,
-    url="https://github.com/pybraries/pybraries/",
+    url="https://github.com/andylamp/pybraries/",
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[

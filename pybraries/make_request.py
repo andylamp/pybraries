@@ -1,7 +1,6 @@
 """Module that contains the make request helper."""
 from requests.exceptions import HTTPError
 
-from pybraries.helpers import clear_params, sess
 from pybraries.pagination import fix_pages
 
 
